@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1001 /* StopTheMadnessProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2001 /* StopTheMadnessProApp.swift */; };
+		1002 /* UrlSanitizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2002 /* UrlSanitizer.swift */; };
+		1003 /* AmpBypasser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003 /* AmpBypasser.swift */; };
+		1004 /* LinkUnshortener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2004 /* LinkUnshortener.swift */; };
+		1005 /* ScriptInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005 /* ScriptInjector.swift */; };
+		1006 /* WebBridgeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006 /* WebBridgeHandler.swift */; };
+		1007 /* StopTheMadnessWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2007 /* StopTheMadnessWebView.swift */; };
+		1008 /* BrowserTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2008 /* BrowserTab.swift */; };
+		1009 /* CustomRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2009 /* CustomRule.swift */; };
+		1010 /* ProtectionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2010 /* ProtectionSettings.swift */; };
+		1011 /* ProtectionStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011 /* ProtectionStats.swift */; };
+		1012 /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2012 /* PreferenceManager.swift */; };
+		1013 /* BrowserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2013 /* BrowserViewModel.swift */; };
+		1014 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2014 /* MainView.swift */; };
+		1015 /* AddressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2015 /* AddressBarView.swift */; };
+		1016 /* BottomToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2016 /* BottomToolbarView.swift */; };
+		1017 /* ProtectionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017 /* ProtectionSheetView.swift */; };
+		1018 /* UrlEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2018 /* UrlEditorView.swift */; };
+		1019 /* TabSwitcherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019 /* TabSwitcherView.swift */; };
+		1020 /* CustomRuleEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2020 /* CustomRuleEditorView.swift */; };
+		1021 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021 /* SettingsView.swift */; };
+		1022 /* CustomRulesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2022 /* CustomRulesListView.swift */; };
+		1023 /* stopthemadness.js in Resources */ = {isa = PBXBuildFile; fileRef = 2023 /* stopthemadness.js */; };
+		1024 /* stopthemadness.css in Resources */ = {isa = PBXBuildFile; fileRef = 2024 /* stopthemadness.css */; };
+		1025 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2025 /* Assets.xcassets */; };
+		1026 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2026 /* SafariWebExtensionHandler.swift */; };
+		1027 /* UrlSanitizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2027 /* UrlSanitizerTests.swift */; };
+		1028 /* AmpBypasserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2028 /* AmpBypasserTests.swift */; };
+		1029 /* LinkUnshortenerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029 /* LinkUnshortenerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0001 /* StopTheMadnessPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopTheMadnessPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0002 /* StopTheMadnessExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StopTheMadnessExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0003 /* StopTheMadnessProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StopTheMadnessProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2001 /* StopTheMadnessProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTheMadnessProApp.swift; sourceTree = "<group>"; };
+		2002 /* UrlSanitizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSanitizer.swift; sourceTree = "<group>"; };
+		2003 /* AmpBypasser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmpBypasser.swift; sourceTree = "<group>"; };
+		2004 /* LinkUnshortener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkUnshortener.swift; sourceTree = "<group>"; };
+		2005 /* ScriptInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptInjector.swift; sourceTree = "<group>"; };
+		2006 /* WebBridgeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBridgeHandler.swift; sourceTree = "<group>"; };
+		2007 /* StopTheMadnessWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTheMadnessWebView.swift; sourceTree = "<group>"; };
+		2008 /* BrowserTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserTab.swift; sourceTree = "<group>"; };
+		2009 /* CustomRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRule.swift; sourceTree = "<group>"; };
+		2010 /* ProtectionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectionSettings.swift; sourceTree = "<group>"; };
+		2011 /* ProtectionStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectionStats.swift; sourceTree = "<group>"; };
+		2012 /* PreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceManager.swift; sourceTree = "<group>"; };
+		2013 /* BrowserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewModel.swift; sourceTree = "<group>"; };
+		2014 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2015 /* AddressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBarView.swift; sourceTree = "<group>"; };
+		2016 /* BottomToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomToolbarView.swift; sourceTree = "<group>"; };
+		2017 /* ProtectionSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectionSheetView.swift; sourceTree = "<group>"; };
+		2018 /* UrlEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlEditorView.swift; sourceTree = "<group>"; };
+		2019 /* TabSwitcherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSwitcherView.swift; sourceTree = "<group>"; };
+		2020 /* CustomRuleEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRuleEditorView.swift; sourceTree = "<group>"; };
+		2021 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2022 /* CustomRulesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRulesListView.swift; sourceTree = "<group>"; };
+		2023 /* stopthemadness.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = stopthemadness.js; sourceTree = "<group>"; };
+		2024 /* stopthemadness.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = stopthemadness.css; sourceTree = "<group>"; };
+		2025 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2026 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		2027 /* UrlSanitizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSanitizerTests.swift; sourceTree = "<group>"; };
+		2028 /* AmpBypasserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmpBypasserTests.swift; sourceTree = "<group>"; };
+		2029 /* LinkUnshortenerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkUnshortenerTests.swift; sourceTree = "<group>"; };
+		2030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4000 /* Main Group */ = {
+			isa = PBXGroup;
+			children = (
+				4001 /* StopTheMadnessPro */,
+				4002 /* StopTheMadnessExtension */,
+				4003 /* StopTheMadnessProTests */,
+				4004 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4001 /* StopTheMadnessPro */ = {
+			isa = PBXGroup;
+			children = (
+				4010 /* App */,
+				4020 /* Core */,
+				4030 /* Data */,
+				4040 /* ViewModels */,
+				4050 /* UI */,
+				4060 /* Resources */,
+			);
+			path = StopTheMadnessPro;
+			sourceTree = "<group>";
+		};
+		4010 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2001 /* StopTheMadnessProApp.swift */,
+				2030 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4020 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2002 /* UrlSanitizer.swift */,
+				2003 /* AmpBypasser.swift */,
+				2004 /* LinkUnshortener.swift */,
+				2005 /* ScriptInjector.swift */,
+				2006 /* WebBridgeHandler.swift */,
+				2007 /* StopTheMadnessWebView.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		4030 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2008 /* BrowserTab.swift */,
+				2009 /* CustomRule.swift */,
+				2010 /* ProtectionSettings.swift */,
+				2011 /* ProtectionStats.swift */,
+				2012 /* PreferenceManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4040 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2013 /* BrowserViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4050 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2014 /* MainView.swift */,
+				2015 /* AddressBarView.swift */,
+				2016 /* BottomToolbarView.swift */,
+				2017 /* ProtectionSheetView.swift */,
+				2018 /* UrlEditorView.swift */,
+				2019 /* TabSwitcherView.swift */,
+				2020 /* CustomRuleEditorView.swift */,
+				2021 /* SettingsView.swift */,
+				2022 /* CustomRulesListView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4060 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2023 /* stopthemadness.js */,
+				2024 /* stopthemadness.css */,
+				2025 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4002 /* StopTheMadnessExtension */ = {
+			isa = PBXGroup;
+			children = (
+				2026 /* SafariWebExtensionHandler.swift */,
+				2031 /* Info.plist */,
+			);
+			path = StopTheMadnessExtension;
+			sourceTree = "<group>";
+		};
+		4003 /* StopTheMadnessProTests */ = {
+			isa = PBXGroup;
+			children = (
+				2027 /* UrlSanitizerTests.swift */,
+				2028 /* AmpBypasserTests.swift */,
+				2029 /* LinkUnshortenerTests.swift */,
+			);
+			path = StopTheMadnessProTests;
+			sourceTree = "<group>";
+		};
+		4004 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0001 /* StopTheMadnessPro.app */,
+				0002 /* StopTheMadnessExtension.appex */,
+				0003 /* StopTheMadnessProTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5001 /* StopTheMadnessPro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6001 /* Build configuration list for PBXNativeTarget "StopTheMadnessPro" */;
+			buildPhases = (
+				7001 /* Sources */,
+				3001 /* Frameworks */,
+				8001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StopTheMadnessPro;
+			productName = StopTheMadnessPro;
+			productReference = 0001 /* StopTheMadnessPro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5002 /* StopTheMadnessExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6002 /* Build configuration list for PBXNativeTarget "StopTheMadnessExtension" */;
+			buildPhases = (
+				7002 /* Sources */,
+				3002 /* Frameworks */,
+				8002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StopTheMadnessExtension;
+			productName = StopTheMadnessExtension;
+			productReference = 0002 /* StopTheMadnessExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		5003 /* StopTheMadnessProTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003 /* Build configuration list for PBXNativeTarget "StopTheMadnessProTests" */;
+			buildPhases = (
+				7003 /* Sources */,
+				3003 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StopTheMadnessProTests;
+			productName = StopTheMadnessProTests;
+			productReference = 0003 /* StopTheMadnessProTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					5001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					5002 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					5003 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 5001;
+					};
+				};
+			};
+			buildConfigurationList = 6000 /* Build configuration list for PBXProject "StopTheMadnessPro" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4000 /* Main Group */;
+			productRefGroup = 4004 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5001 /* StopTheMadnessPro */,
+				5002 /* StopTheMadnessExtension */,
+				5003 /* StopTheMadnessProTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1023 /* stopthemadness.js in Resources */,
+				1024 /* stopthemadness.css in Resources */,
+				1025 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1001 /* StopTheMadnessProApp.swift in Sources */,
+				1002 /* UrlSanitizer.swift in Sources */,
+				1003 /* AmpBypasser.swift in Sources */,
+				1004 /* LinkUnshortener.swift in Sources */,
+				1005 /* ScriptInjector.swift in Sources */,
+				1006 /* WebBridgeHandler.swift in Sources */,
+				1007 /* StopTheMadnessWebView.swift in Sources */,
+				1008 /* BrowserTab.swift in Sources */,
+				1009 /* CustomRule.swift in Sources */,
+				1010 /* ProtectionSettings.swift in Sources */,
+				1011 /* ProtectionStats.swift in Sources */,
+				1012 /* PreferenceManager.swift in Sources */,
+				1013 /* BrowserViewModel.swift in Sources */,
+				1014 /* MainView.swift in Sources */,
+				1015 /* AddressBarView.swift in Sources */,
+				1016 /* BottomToolbarView.swift in Sources */,
+				1017 /* ProtectionSheetView.swift in Sources */,
+				1018 /* UrlEditorView.swift in Sources */,
+				1019 /* TabSwitcherView.swift in Sources */,
+				1020 /* CustomRuleEditorView.swift in Sources */,
+				1021 /* SettingsView.swift in Sources */,
+				1022 /* CustomRulesListView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1026 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1027 /* UrlSanitizerTests.swift in Sources */,
+				1028 /* AmpBypasserTests.swift in Sources */,
+				1029 /* LinkUnshortenerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9101 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9201 /* Debug - App */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = StopTheMadnessPro/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stopthemadness.pro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9202 /* Release - App */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = StopTheMadnessPro/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stopthemadness.pro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9301 /* Debug - Extension */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = StopTheMadnessExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stopthemadness.pro.extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9302 /* Release - Extension */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = StopTheMadnessExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stopthemadness.pro.extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9401 /* Debug - Tests */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stopthemadness.pro.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StopTheMadnessPro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StopTheMadnessPro";
+			};
+			name = Debug;
+		};
+		9402 /* Release - Tests */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stopthemadness.pro.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StopTheMadnessPro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StopTheMadnessPro";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6000 /* Build configuration list for PBXProject "StopTheMadnessPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9101 /* Debug */,
+				9102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6001 /* Build configuration list for PBXNativeTarget "StopTheMadnessPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9201 /* Debug - App */,
+				9202 /* Release - App */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6002 /* Build configuration list for PBXNativeTarget "StopTheMadnessExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9301 /* Debug - Extension */,
+				9302 /* Release - Extension */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003 /* Build configuration list for PBXNativeTarget "StopTheMadnessProTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9401 /* Debug - Tests */,
+				9402 /* Release - Tests */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 9001 /* Project object */;
+}

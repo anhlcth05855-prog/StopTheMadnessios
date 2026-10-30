@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "StopTheMadness Pro",
+  "version": "1.0.0",
+  "description": "Lấy lại quyền kiểm soát web trên Safari iOS & iPadOS",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["stopthemadness.js"],
+      "css": ["stopthemadness.css"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_title": "StopTheMadness Pro",
+    "default_popup": "popup.html"
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StopTheMadness Pro</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <div class="shield-badge">🛡️</div>
+    <div class="title-group">
+      <h3>StopTheMadness Pro</h3>
+      <p id="domain-text">Trang web hiện tại</p>
+    </div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-box">
+      <span class="stat-num" id="stat-trackers">0</span>
+      <span class="stat-label">Trackers</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num" id="stat-amp">0</span>
+      <span class="stat-label">Bỏ AMP</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num" id="stat-autoplay">0</span>
+      <span class="stat-label">Chặn Play</span>
+    </div>
+  </div>
+
+  <div class="toggles">
+    <label class="toggle-item">
+      <span>Khôi phục tương tác</span>
+      <input type="checkbox" id="toggle-interaction" checked>
+    </label>
+    <label class="toggle-item">
+      <span>Chặn URL Trackers</span>
+      <input type="checkbox" id="toggle-trackers" checked>
+    </label>
+    <label class="toggle-item">
+      <span>Kiểm soát Video/Audio</span>
+      <input type="checkbox" id="toggle-media" checked>
+    </label>
+    <label class="toggle-item">
+      <span>Ẩn banner làm phiền</span>
+      <input type="checkbox" id="toggle-annoyances" checked>
+    </label>
+  </div>
+
+  <button id="btn-clean-url" class="btn-action">Dọn sạch URL trang này</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

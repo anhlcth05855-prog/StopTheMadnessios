@@ -1,0 +1,28 @@
+# Xcode
+## User settings
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+*.moved-aside
+DerivedData/
+*.xcuserstate
+
+## Build generated
+build/
+*.build/
+*.app
+*.dSYM
+*.ipa
+
+## Swift Package Manager
+.build/
+.swiftpm/
+
+## OS generated
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
