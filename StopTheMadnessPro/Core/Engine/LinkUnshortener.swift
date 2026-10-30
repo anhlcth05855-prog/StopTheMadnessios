@@ -76,3 +76,4 @@ public final class LinkUnshortener: NSObject, URLSessionTaskDelegate {
         return currentUrl
     }
 }
+

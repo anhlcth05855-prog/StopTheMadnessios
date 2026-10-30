@@ -106,3 +106,4 @@ public final class BrowserViewModel: ObservableObject {
         return UrlSanitizer.sanitize(currentUrl).cleanedUrl
     }
 }
+

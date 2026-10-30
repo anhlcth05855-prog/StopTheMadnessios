@@ -21,3 +21,4 @@ public struct CustomRule: Codable, Identifiable, Equatable {
         self.enabled = enabled
     }
 }
+

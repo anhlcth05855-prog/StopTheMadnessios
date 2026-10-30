@@ -106,3 +106,4 @@ public struct CustomRulesListView: View {
         }
     }
 }
+

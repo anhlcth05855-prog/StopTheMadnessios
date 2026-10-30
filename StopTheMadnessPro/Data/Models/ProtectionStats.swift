@@ -32,3 +32,4 @@ public struct ProtectionStats: Codable, Equatable {
         annoyancesBlocked = 0
     }
 }
+

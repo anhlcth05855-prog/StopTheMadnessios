@@ -14,7 +14,8 @@ public final class PreferenceManager: ObservableObject {
     private let settingsKey = "stopthemadness_settings"
     private let customRulesKey = "stopthemadness_custom_rules"
     private let disabledDomainsKey = "stopthemadness_disabled_domains"
-    private let appGroupSuite = "group.com.stopthemadness.pro"
+    private let appGroupSuite = "group.com.stopthemadness.ios"
+    private let fallbackSuite = "group.com.stopthemadness.pro"
 
     @Published public var settings: ProtectionSettings {
         didSet {
@@ -35,8 +36,10 @@ public final class PreferenceManager: ObservableObject {
     }
 
     public init() {
-        if let sharedDefaults = UserDefaults(suiteName: appGroupSuite) {
+        if let sharedDefaults = UserDefaults(suiteName: "group.com.stopthemadness.ios") {
             self.userDefaults = sharedDefaults
+        } else if let fallbackDefaults = UserDefaults(suiteName: "group.com.stopthemadness.pro") {
+            self.userDefaults = fallbackDefaults
         } else {
             self.userDefaults = UserDefaults.standard
         }
@@ -118,3 +121,4 @@ public final class PreferenceManager: ObservableObject {
         userDefaults.set(Array(domains), forKey: disabledDomainsKey)
     }
 }
+

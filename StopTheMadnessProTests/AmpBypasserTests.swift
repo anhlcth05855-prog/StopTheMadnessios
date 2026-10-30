@@ -32,3 +32,4 @@ final class AmpBypasserTests: XCTestCase {
         XCTAssertNil(AmpBypasser.extractCanonicalUrl(normalUrl))
     }
 }
+

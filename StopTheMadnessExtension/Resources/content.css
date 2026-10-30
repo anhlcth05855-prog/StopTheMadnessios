@@ -1,0 +1,44 @@
+/* StopTheMadness Pro - Safari Web Extension CSS Engine for iOS */
+
+/* 1. Khôi phục hoàn toàn quyền bôi đen & tương tác văn bản */
+* {
+    -webkit-user-select: text !important;
+    user-select: text !important;
+    -webkit-touch-callout: default !important;
+}
+
+/* 2. Loại bỏ các banner ép tải ứng dụng di động & Popups làm phiền */
+.smartbanner,
+.app-banner,
+.mobile-app-banner,
+#credential_picker_container,
+iframe[src*="smartlock.google.com"],
+iframe[src*="accounts.google.com/gsi/"],
+[class*="AppInstallBanner"],
+[class*="OpenInAppModal"],
+[id*="google-one-tap"],
+div[aria-label="Get the Reddit app"],
+.RedditAppBanner,
+.quora-app-banner,
+.branch-journeys-top,
+#branch-banner-iframe {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    max-height: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* 3. Đảm bảo controls trình phát Video & Audio luôn tương tác được */
+video, audio {
+    pointer-events: auto !important;
+}
+
+/* 4. Mở khóa cuộn trang khi bị trang web khóa bằng overflow hidden */
+html, body {
+    overflow-y: auto !important;
+    touch-action: pan-y pinch-zoom !important;
+}
+

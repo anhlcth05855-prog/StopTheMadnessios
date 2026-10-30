@@ -247,3 +247,4 @@ public struct StopTheMadnessWebView: UIViewRepresentable {
         }
     }
 }
+

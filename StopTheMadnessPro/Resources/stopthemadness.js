@@ -310,3 +310,4 @@
 
     console.log('[StopTheMadness Pro iOS] Engine initialized successfully.');
 })();
+

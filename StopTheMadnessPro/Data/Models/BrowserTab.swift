@@ -27,3 +27,4 @@ public class BrowserTab: Identifiable, ObservableObject {
         self.stats = ProtectionStats()
     }
 }
+

@@ -1,0 +1,21 @@
+stages:
+  - build
+
+build_ipa:
+  stage: build
+  tags:
+    - saas-macos-medium-m1
+  script:
+    - xcodebuild clean build -project StopTheMadnessPro.xcodeproj -scheme StopTheMadnessPro -configuration Release -sdk iphoneos -derivedDataPath build CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=""
+    - mkdir -p Payload
+    - cp -r build/Build/Products/Release-iphoneos/StopTheMadnessPro.app Payload/
+    - zip -r StopTheMadnessPro.ipa Payload
+  artifacts:
+    name: "StopTheMadnessPro-IPA"
+    paths:
+      - StopTheMadnessPro.ipa
+    expire_in: 1 week
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main" || $CI_COMMIT_BRANCH == "master"'
+    - if: '$CI_PIPELINE_SOURCE == "web"'
+

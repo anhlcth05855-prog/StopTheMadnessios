@@ -137,3 +137,4 @@ StopTheMadness Pro ios/
    - **StopTheMadnessExtension** (để chạy và test tiện ích mở rộng trên Safari).
 3. Nhấn `Cmd + R` để Build & Run.
 4. Chạy Unit Tests bằng tổ hợp phím `Cmd + U`.
+

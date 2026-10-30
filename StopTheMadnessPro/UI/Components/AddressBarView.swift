@@ -104,3 +104,4 @@ public struct AddressBarView: View {
         return isEnabled ? .indigo : .gray
     }
 }
+

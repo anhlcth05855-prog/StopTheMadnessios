@@ -45,3 +45,4 @@ final class UrlSanitizerTests: XCTestCase {
         XCTAssertTrue(result.cleanedUrl.contains("github.com/project"))
     }
 }
+

@@ -17,3 +17,4 @@ final class LinkUnshortenerTests: XCTestCase {
         XCTAssertFalse(LinkUnshortener.shared.isShortened("https://apple.com/ios"))
     }
 }
+
