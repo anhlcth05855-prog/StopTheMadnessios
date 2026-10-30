@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleDisplayName</key>
+	<string>StopTheMadness Pro</string>
+	<key>bundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>bundleVersion</key>
+	<string>1.0.0</string>
+	<key>itemId</key>
+	<integer>1548234857</integer>
+	<key>itemName</key>
+	<string>StopTheMadness Pro</string>
+	<key>kind</key>
+	<string>software</string>
+	<key>playlistArtistName</key>
+	<string>Underpass App Company</string>
+	<key>playlistName</key>
+	<string>StopTheMadness Pro</string>
+	<key>softwareVersionBundleId</key>
+	<string>com.stopthemadness.pro</string>
+	<key>softwareVersionExternalIdentifier</key>
+	<integer>842194821</integer>
+	<key>subgenres</key>
+	<array>
+		<dict>
+			<key>genre</key>
+			<string>Utilities</string>
+			<key>genreId</key>
+			<integer>6002</integer>
+		</dict>
+	</array>
+</dict>
+</plist>
