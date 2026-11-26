@@ -73,3 +73,13 @@ jobs:
         with:
           name: StopTheMadnessPro-IPA
           path: StopTheMadnessPro.ipa
+
+      - name: Upload Build Logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Xcode-Build-Logs
+          path: |
+            build_app.log
+            build_ext.log
+          if-no-files-found: ignore

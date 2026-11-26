@@ -52,27 +52,27 @@
 		0002 /* StopTheMadnessExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StopTheMadnessExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0003 /* StopTheMadnessProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StopTheMadnessProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2001 /* StopTheMadnessProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTheMadnessProApp.swift; sourceTree = "<group>"; };
-		2002 /* UrlSanitizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSanitizer.swift; sourceTree = "<group>"; };
-		2003 /* AmpBypasser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmpBypasser.swift; sourceTree = "<group>"; };
-		2004 /* LinkUnshortener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkUnshortener.swift; sourceTree = "<group>"; };
-		2005 /* ScriptInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptInjector.swift; sourceTree = "<group>"; };
-		2006 /* WebBridgeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBridgeHandler.swift; sourceTree = "<group>"; };
-		2007 /* StopTheMadnessWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTheMadnessWebView.swift; sourceTree = "<group>"; };
-		2008 /* BrowserTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserTab.swift; sourceTree = "<group>"; };
-		2009 /* CustomRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRule.swift; sourceTree = "<group>"; };
-		2010 /* ProtectionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectionSettings.swift; sourceTree = "<group>"; };
-		2011 /* ProtectionStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectionStats.swift; sourceTree = "<group>"; };
-		2012 /* PreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceManager.swift; sourceTree = "<group>"; };
+		2002 /* UrlSanitizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Engine/UrlSanitizer.swift"; sourceTree = "<group>"; };
+		2003 /* AmpBypasser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Engine/AmpBypasser.swift"; sourceTree = "<group>"; };
+		2004 /* LinkUnshortener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Engine/LinkUnshortener.swift"; sourceTree = "<group>"; };
+		2005 /* ScriptInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Engine/ScriptInjector.swift"; sourceTree = "<group>"; };
+		2006 /* WebBridgeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Engine/WebBridgeHandler.swift"; sourceTree = "<group>"; };
+		2007 /* StopTheMadnessWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebView/StopTheMadnessWebView.swift"; sourceTree = "<group>"; };
+		2008 /* BrowserTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Models/BrowserTab.swift"; sourceTree = "<group>"; };
+		2009 /* CustomRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Models/CustomRule.swift"; sourceTree = "<group>"; };
+		2010 /* ProtectionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Models/ProtectionSettings.swift"; sourceTree = "<group>"; };
+		2011 /* ProtectionStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Models/ProtectionStats.swift"; sourceTree = "<group>"; };
+		2012 /* PreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storage/PreferenceManager.swift"; sourceTree = "<group>"; };
 		2013 /* BrowserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewModel.swift; sourceTree = "<group>"; };
 		2014 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		2015 /* AddressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBarView.swift; sourceTree = "<group>"; };
-		2016 /* BottomToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomToolbarView.swift; sourceTree = "<group>"; };
-		2017 /* ProtectionSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectionSheetView.swift; sourceTree = "<group>"; };
-		2018 /* UrlEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlEditorView.swift; sourceTree = "<group>"; };
-		2019 /* TabSwitcherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSwitcherView.swift; sourceTree = "<group>"; };
-		2020 /* CustomRuleEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRuleEditorView.swift; sourceTree = "<group>"; };
-		2021 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		2022 /* CustomRulesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRulesListView.swift; sourceTree = "<group>"; };
+		2015 /* AddressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Components/AddressBarView.swift"; sourceTree = "<group>"; };
+		2016 /* BottomToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Components/BottomToolbarView.swift"; sourceTree = "<group>"; };
+		2017 /* ProtectionSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dialogs/ProtectionSheetView.swift"; sourceTree = "<group>"; };
+		2018 /* UrlEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dialogs/UrlEditorView.swift"; sourceTree = "<group>"; };
+		2019 /* TabSwitcherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dialogs/TabSwitcherView.swift"; sourceTree = "<group>"; };
+		2020 /* CustomRuleEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dialogs/CustomRuleEditorView.swift"; sourceTree = "<group>"; };
+		2021 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings/SettingsView.swift"; sourceTree = "<group>"; };
+		2022 /* CustomRulesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings/CustomRulesListView.swift"; sourceTree = "<group>"; };
 		2023 /* stopthemadness.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = stopthemadness.js; sourceTree = "<group>"; };
 		2024 /* stopthemadness.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = stopthemadness.css; sourceTree = "<group>"; };
 		2025 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,8 +83,8 @@
 		2030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2032 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		2033 /* SettingsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListView.swift; sourceTree = "<group>"; };
-		2034 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		2033 /* SettingsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings/SettingsListView.swift"; sourceTree = "<group>"; };
+		2034 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storage/SettingsManager.swift"; sourceTree = "<group>"; };
 		2035 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
 		2036 /* content.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = content.css; sourceTree = "<group>"; };
 		2037 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
@@ -486,7 +486,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = StopTheMadnessPro/App/Info.plist;
@@ -507,7 +511,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = StopTheMadnessPro/App/Info.plist;
@@ -526,7 +534,11 @@
 		9301 /* Debug - Extension */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = StopTheMadnessExtension/Info.plist;
@@ -546,7 +558,11 @@
 		9302 /* Release - Extension */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = StopTheMadnessExtension/Info.plist;
@@ -567,7 +583,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -583,7 +603,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
