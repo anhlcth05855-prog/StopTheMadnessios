@@ -35,37 +35,35 @@ public struct ScriptInjector {
         guard settings.masterEnabled else { return scripts }
 
         // 1. Inject CSS via Javascript wrapper at document start
-        if let css = cachedCss ?? defaultCss() {
-            let encoded = Data(css.utf8).base64EncodedString()
-            let cssInjectionJs = """
-            (function() {
-                const styleId = 'stm-injected-style';
-                if (!document.getElementById(styleId)) {
-                    const style = document.createElement('style');
-                    style.id = styleId;
-                    style.type = 'text/css';
-                    style.innerHTML = window.atob('\(encoded)');
-                    (document.head || document.documentElement).appendChild(style);
-                }
-            })();
-            """
-            let cssScript = WKUserScript(
-                source: cssInjectionJs,
-                injectionTime: .atDocumentStart,
-                forMainFrameOnly: false
-            )
-            scripts.append(cssScript)
-        }
+        let css = cachedCss ?? defaultCss()
+        let encoded = Data(css.utf8).base64EncodedString()
+        let cssInjectionJs = """
+        (function() {
+            const styleId = 'stm-injected-style';
+            if (!document.getElementById(styleId)) {
+                const style = document.createElement('style');
+                style.id = styleId;
+                style.type = 'text/css';
+                style.innerHTML = window.atob('\(encoded)');
+                (document.head || document.documentElement).appendChild(style);
+            }
+        })();
+        """
+        let cssScript = WKUserScript(
+            source: cssInjectionJs,
+            injectionTime: .atDocumentStart,
+            forMainFrameOnly: false
+        )
+        scripts.append(cssScript)
 
         // 2. Inject JS Engine at document start
-        if let js = cachedJs ?? defaultJs() {
-            let jsScript = WKUserScript(
-                source: js,
-                injectionTime: .atDocumentStart,
-                forMainFrameOnly: false
-            )
-            scripts.append(jsScript)
-        }
+        let js = cachedJs ?? defaultJs()
+        let jsScript = WKUserScript(
+            source: js,
+            injectionTime: .atDocumentStart,
+            forMainFrameOnly: false
+        )
+        scripts.append(jsScript)
 
         return scripts
     }
