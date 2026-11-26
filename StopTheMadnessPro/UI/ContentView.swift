@@ -20,7 +20,7 @@ public struct ContentView: View {
     @State private var exportDocument: SettingsDocument?
     @State private var statusToast: String?
 
-    private let supportWebsiteUrl = URL(string: "https://gitlab.com/sondeptrai/stopthemadness_ios")!
+    private let supportWebsiteUrl = URL(string: "https://github.com/anhlcth05855-prog/StopTheMadnessios")!
 
     public init() {}
 

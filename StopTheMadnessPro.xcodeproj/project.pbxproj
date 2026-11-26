@@ -36,6 +36,15 @@
 		1027 /* UrlSanitizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2027 /* UrlSanitizerTests.swift */; };
 		1028 /* AmpBypasserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2028 /* AmpBypasserTests.swift */; };
 		1029 /* LinkUnshortenerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029 /* LinkUnshortenerTests.swift */; };
+		1030 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2032 /* ContentView.swift */; };
+		1031 /* SettingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2033 /* SettingsListView.swift */; };
+		1032 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2034 /* SettingsManager.swift */; };
+		1033 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 2035 /* content.js */; };
+		1034 /* content.css in Resources */ = {isa = PBXBuildFile; fileRef = 2036 /* content.css */; };
+		1035 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 2037 /* manifest.json */; };
+		1036 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 2038 /* popup.html */; };
+		1037 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 2039 /* popup.js */; };
+		1038 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 2040 /* popup.css */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +82,15 @@
 		2029 /* LinkUnshortenerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkUnshortenerTests.swift; sourceTree = "<group>"; };
 		2030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2032 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2033 /* SettingsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListView.swift; sourceTree = "<group>"; };
+		2034 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		2035 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
+		2036 /* content.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = content.css; sourceTree = "<group>"; };
+		2037 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		2038 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
+		2039 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
+		2040 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +171,7 @@
 				2010 /* ProtectionSettings.swift */,
 				2011 /* ProtectionStats.swift */,
 				2012 /* PreferenceManager.swift */,
+				2034 /* SettingsManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -168,6 +187,7 @@
 		4050 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2032 /* ContentView.swift */,
 				2014 /* MainView.swift */,
 				2015 /* AddressBarView.swift */,
 				2016 /* BottomToolbarView.swift */,
@@ -176,6 +196,7 @@
 				2019 /* TabSwitcherView.swift */,
 				2020 /* CustomRuleEditorView.swift */,
 				2021 /* SettingsView.swift */,
+				2033 /* SettingsListView.swift */,
 				2022 /* CustomRulesListView.swift */,
 			);
 			path = UI;
@@ -196,8 +217,22 @@
 			children = (
 				2026 /* SafariWebExtensionHandler.swift */,
 				2031 /* Info.plist */,
+				4070 /* Resources */,
 			);
 			path = StopTheMadnessExtension;
+			sourceTree = "<group>";
+		};
+		4070 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2035 /* content.js */,
+				2036 /* content.css */,
+				2037 /* manifest.json */,
+				2038 /* popup.html */,
+				2039 /* popup.js */,
+				2040 /* popup.css */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		4003 /* StopTheMadnessProTests */ = {
@@ -330,6 +365,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1033 /* content.js in Resources */,
+				1034 /* content.css in Resources */,
+				1035 /* manifest.json in Resources */,
+				1036 /* popup.html in Resources */,
+				1037 /* popup.js in Resources */,
+				1038 /* popup.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +382,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1001 /* StopTheMadnessProApp.swift in Sources */,
+				1030 /* ContentView.swift in Sources */,
+				1031 /* SettingsListView.swift in Sources */,
+				1032 /* SettingsManager.swift in Sources */,
 				1002 /* UrlSanitizer.swift in Sources */,
 				1003 /* AmpBypasser.swift in Sources */,
 				1004 /* LinkUnshortener.swift in Sources */,

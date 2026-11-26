@@ -14,9 +14,15 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Select Xcode Version
-        run: sudo xcode-select -s /Applications/Xcode_15.4.app/Contents/Developer
+        run: |
+          if [ -d "/Applications/Xcode_16.0.app" ]; then
+            sudo xcode-select -s /Applications/Xcode_16.0.app/Contents/Developer
+          elif [ -d "/Applications/Xcode_15.4.app" ]; then
+            sudo xcode-select -s /Applications/Xcode_15.4.app/Contents/Developer
+          fi
+          xcodebuild -version
 
-      - name: Build App with Xcodebuild
+      - name: Build App & Extension with Xcodebuild
         run: |
           xcodebuild clean build \
             -project StopTheMadnessPro.xcodeproj \
@@ -28,11 +34,28 @@ jobs:
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY=""
 
+          xcodebuild build \
+            -project StopTheMadnessPro.xcodeproj \
+            -scheme StopTheMadnessExtension \
+            -configuration Release \
+            -sdk iphoneos \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" || true
+
       - name: Package into IPA
         run: |
           mkdir -p Payload
           cp -r build/Build/Products/Release-iphoneos/StopTheMadnessPro.app Payload/
-          zip -r StopTheMadnessPro.ipa Payload
+          mkdir -p Payload/StopTheMadnessPro.app/PlugIns
+          if [ -d "build/Build/Products/Release-iphoneos/StopTheMadnessExtension.appex" ]; then
+            cp -r build/Build/Products/Release-iphoneos/StopTheMadnessExtension.appex Payload/StopTheMadnessPro.app/PlugIns/
+          fi
+          if [ -f "iTunesMetadata.plist" ]; then
+            cp iTunesMetadata.plist Payload/
+          fi
+          zip -qry StopTheMadnessPro.ipa Payload iTunesMetadata.plist
           rm -rf Payload
 
       - name: Upload IPA Artifact
@@ -40,4 +63,3 @@ jobs:
         with:
           name: StopTheMadnessPro-IPA
           path: StopTheMadnessPro.ipa
-
