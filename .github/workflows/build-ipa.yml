@@ -13,32 +13,46 @@ jobs:
       - name: Checkout Source Code
         uses: actions/checkout@v4
 
-      - name: Show Xcode Version
+      - name: Show Xcode Version & Schemes
         run: |
           xcodebuild -version
           xcodebuild -list -project StopTheMadnessPro.xcodeproj
 
       - name: Build App & Extension with Xcodebuild
         run: |
+          set -o pipefail
           xcodebuild clean build \
             -project StopTheMadnessPro.xcodeproj \
             -scheme StopTheMadnessPro \
             -configuration Release \
-            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
             -derivedDataPath build \
+            CODE_SIGN_STYLE=Manual \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGN_IDENTITY=""
+            CODE_SIGN_IDENTITY="" \
+            DEVELOPMENT_TEAM="" \
+            PROVISIONING_PROFILE_SPECIFIER="" 2>&1 | tee build_app.log
 
           xcodebuild build \
             -project StopTheMadnessPro.xcodeproj \
             -scheme StopTheMadnessExtension \
             -configuration Release \
-            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
             -derivedDataPath build \
+            CODE_SIGN_STYLE=Manual \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGN_IDENTITY="" || true
+            CODE_SIGN_IDENTITY="" \
+            DEVELOPMENT_TEAM="" \
+            PROVISIONING_PROFILE_SPECIFIER="" 2>&1 | tee build_ext.log || true
+
+      - name: Show Build Errors on Failure
+        if: failure()
+        run: |
+          echo "=== BUILD LOG FAILURE SUMMARY ==="
+          if [ -f build_app.log ]; then tail -n 120 build_app.log; fi
+          if [ -f build_ext.log ]; then tail -n 120 build_ext.log; fi
 
       - name: Package into IPA
         run: |

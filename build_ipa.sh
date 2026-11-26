@@ -17,22 +17,28 @@ xcodebuild clean build \
     -project "$PROJECT_DIR/StopTheMadnessPro.xcodeproj" \
     -scheme "StopTheMadnessPro" \
     -configuration Release \
-    -sdk iphoneos \
+    -destination 'generic/platform=iOS' \
     -derivedDataPath "$BUILD_DIR" \
+    CODE_SIGN_STYLE=Manual \
     CODE_SIGNING_ALLOWED=NO \
     CODE_SIGNING_REQUIRED=NO \
-    CODE_SIGN_IDENTITY=""
+    CODE_SIGN_IDENTITY="" \
+    DEVELOPMENT_TEAM="" \
+    PROVISIONING_PROFILE_SPECIFIER=""
 
 echo "[3/5] Biên dịch Safari Web Extension bằng xcodebuild..."
 xcodebuild build \
     -project "$PROJECT_DIR/StopTheMadnessPro.xcodeproj" \
     -scheme "StopTheMadnessExtension" \
     -configuration Release \
-    -sdk iphoneos \
+    -destination 'generic/platform=iOS' \
     -derivedDataPath "$BUILD_DIR" \
+    CODE_SIGN_STYLE=Manual \
     CODE_SIGNING_ALLOWED=NO \
     CODE_SIGNING_REQUIRED=NO \
-    CODE_SIGN_IDENTITY="" || true
+    CODE_SIGN_IDENTITY="" \
+    DEVELOPMENT_TEAM="" \
+    PROVISIONING_PROFILE_SPECIFIER="" || true
 
 APP_PATH="$BUILD_DIR/Build/Products/Release-iphoneos/StopTheMadnessPro.app"
 EXTENSION_PATH="$BUILD_DIR/Build/Products/Release-iphoneos/StopTheMadnessExtension.appex"
