@@ -53,7 +53,7 @@ public struct TabSwitcherView: View {
                         HStack(spacing: 8) {
                             Image(systemName: "plus")
                                 .font(.system(size: 16, weight: .bold))
-                            Text("Thẻ mới")
+                            Text("New Tab")
                                 .font(.system(size: 15, weight: .semibold))
                         }
                         .foregroundColor(.white)
@@ -68,11 +68,11 @@ public struct TabSwitcherView: View {
                 }
                 .padding(.bottom, 16)
             }
-            .navigationTitle("Đang mở (\(viewModel.tabs.count))")
+            .navigationTitle("Open Tabs (\(viewModel.tabs.count))")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Xong") {
+                    Button("Done") {
                         dismiss()
                     }
                     .font(.headline)
@@ -96,7 +96,7 @@ struct TabCardView: View {
                         .font(.system(size: 12))
                         .foregroundColor(.secondary)
 
-                    Text(tab.title.isEmpty ? "Thẻ mới" : tab.title)
+                    Text(tab.title.isEmpty ? "New Tab" : tab.title)
                         .font(.system(size: 13, weight: .semibold))
                         .foregroundColor(.primary)
                         .lineLimit(1)
@@ -126,7 +126,7 @@ struct TabCardView: View {
                         Image(systemName: "shield.fill")
                             .font(.system(size: 9))
                             .foregroundColor(.indigo)
-                        Text("\(tab.stats.trackersRemoved) tracker đã chặn")
+                        Text("\(tab.stats.trackersRemoved) trackers blocked")
                             .font(.system(size: 10, weight: .medium))
                             .foregroundColor(.indigo)
                     }

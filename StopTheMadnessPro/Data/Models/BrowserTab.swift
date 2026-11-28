@@ -20,7 +20,7 @@ public class BrowserTab: Identifiable, ObservableObject {
 
     public var webView: WKWebView?
 
-    public init(id: UUID = UUID(), title: String = "Thẻ mới", url: String = "https://duckduckgo.com") {
+    public init(id: UUID = UUID(), title: String = "New Tab", url: String = "https://duckduckgo.com") {
         self.id = id
         self.title = title
         self.url = url

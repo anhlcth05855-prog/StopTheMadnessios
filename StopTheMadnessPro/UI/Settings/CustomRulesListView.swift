@@ -20,9 +20,9 @@ public struct CustomRulesListView: View {
                     Image(systemName: "curlybraces")
                         .font(.system(size: 36))
                         .foregroundColor(.secondary)
-                    Text("Chưa có quy tắc nào")
+                    Text("No Custom Rules Yet")
                         .font(.headline)
-                    Text("Nhấn vào dấu '+' góc trên để thêm CSS hoặc JavaScript tùy chỉnh cho bất kỳ trang web nào.")
+                    Text("Tap '+' above to add custom CSS or JavaScript for any website.")
                         .font(.caption)
                         .foregroundColor(.secondary)
                         .multilineTextAlignment(.center)
@@ -37,12 +37,12 @@ public struct CustomRulesListView: View {
                         HStack {
                             VStack(alignment: .leading, spacing: 4) {
                                 HStack {
-                                    Text(rule.domain == "*" ? "Toàn cục (*)" : rule.domain)
+                                    Text(rule.domain == "*" ? "Global (*)" : rule.domain)
                                         .font(.headline)
                                         .foregroundColor(.primary)
 
                                     if !rule.enabled {
-                                        Text("ĐÃ TẮT")
+                                        Text("DISABLED")
                                             .font(.system(size: 9, weight: .bold))
                                             .padding(.horizontal, 5)
                                             .padding(.vertical, 2)
@@ -77,7 +77,7 @@ public struct CustomRulesListView: View {
                 .onDelete(perform: deleteRules)
             }
         }
-        .navigationTitle("Quy tắc tùy chỉnh")
+        .navigationTitle("Custom Rules")
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button {

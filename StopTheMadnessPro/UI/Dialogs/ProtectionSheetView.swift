@@ -35,7 +35,7 @@ public struct ProtectionSheetView: View {
                                     .font(.headline)
                                     .lineLimit(1)
 
-                                Text(isDomainEnabled ? "Đang được bảo vệ toàn diện" : "Đã tạm dừng bảo vệ")
+                                Text(isDomainEnabled ? "Fully Protected" : "Protection Paused")
                                     .font(.caption)
                                     .foregroundColor(isDomainEnabled ? .green : .secondary)
                             }
@@ -58,32 +58,32 @@ public struct ProtectionSheetView: View {
 
                     // Live Statistics Card
                     VStack(alignment: .leading, spacing: 12) {
-                        Text("THỐNG KÊ TRÊN TRANG NÀY")
+                        Text("PAGE STATISTICS")
                             .font(.system(size: 12, weight: .semibold))
                             .foregroundColor(.secondary)
                             .padding(.horizontal, 4)
 
                         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
                             StatCard(
-                                title: "Tracker đã xóa",
+                                title: "Trackers Blocked",
                                 count: tabStats.trackersRemoved,
                                 icon: "trash.fill",
                                 color: .purple
                             )
                             StatCard(
-                                title: "Bỏ qua AMP",
+                                title: "AMP Bypassed",
                                 count: tabStats.ampBypassed,
                                 icon: "bolt.horizontal.fill",
                                 color: .orange
                             )
                             StatCard(
-                                title: "Chặn Autoplay",
+                                title: "Autoplay Blocked",
                                 count: tabStats.autoplayBlocked,
                                 icon: "pause.circle.fill",
                                 color: .red
                             )
                             StatCard(
-                                title: "Chặn làm phiền",
+                                title: "Annoyances Removed",
                                 count: tabStats.annoyancesBlocked,
                                 icon: "bell.slash.fill",
                                 color: .blue
@@ -93,15 +93,15 @@ public struct ProtectionSheetView: View {
 
                     // Feature Toggles Section
                     VStack(alignment: .leading, spacing: 12) {
-                        Text("CÔNG CỤ BẢO VỆ TÍCH CỰC")
+                        Text("ACTIVE PROTECTION MODULES")
                             .font(.system(size: 12, weight: .semibold))
                             .foregroundColor(.secondary)
                             .padding(.horizontal, 4)
 
                         VStack(spacing: 0) {
                             ToggleRow(
-                                title: "Khôi phục tương tác web",
-                                subtitle: "Cho phép copy, chuột phải, chọn chữ, cuộn & zoom",
+                                title: "Web Interactions Restoration",
+                                subtitle: "Restore copy, paste, text selection, scroll & zoom",
                                 icon: "hand.tap.fill",
                                 color: .blue,
                                 isOn: Binding(
@@ -113,8 +113,8 @@ public struct ProtectionSheetView: View {
                             Divider().padding(.leading, 56)
 
                             ToggleRow(
-                                title: "Chặn theo dõi & Dọn URL",
-                                subtitle: "Xóa sạch UTM, fbclid, gclid và giải mã liên kết",
+                                title: "Tracker Blocking & URL Sanitizer",
+                                subtitle: "Strip UTM, fbclid, gclid and unwrap tracking links",
                                 icon: "shield.lefthalf.filled",
                                 color: .purple,
                                 isOn: Binding(
@@ -126,8 +126,8 @@ public struct ProtectionSheetView: View {
                             Divider().padding(.leading, 56)
 
                             ToggleRow(
-                                title: "Kiểm soát Video & Âm thanh",
-                                subtitle: "Chặn phát tự động, hiện điều khiển gốc & phát ngầm",
+                                title: "Media & Audio Controls",
+                                subtitle: "Block autoplay, force native controls & background audio",
                                 icon: "play.rectangle.fill",
                                 color: .red,
                                 isOn: Binding(
@@ -139,8 +139,8 @@ public struct ProtectionSheetView: View {
                             Divider().padding(.leading, 56)
 
                             ToggleRow(
-                                title: "Loại bỏ thông báo làm phiền",
-                                subtitle: "Ẩn banner ép tải App, Google One Tap & push prompt",
+                                title: "Annoyance Blockers",
+                                subtitle: "Hide app banners, Google One Tap & push prompts",
                                 icon: "bell.slash.fill",
                                 color: .orange,
                                 isOn: Binding(
@@ -162,7 +162,7 @@ public struct ProtectionSheetView: View {
                         } label: {
                             HStack {
                                 Image(systemName: "curlybraces")
-                                Text("Tùy biến CSS / JS cho trang này")
+                                Text("Custom CSS / JS for this site")
                                 Spacer()
                                 Image(systemName: "chevron.right")
                                     .font(.system(size: 12, weight: .bold))
@@ -181,7 +181,7 @@ public struct ProtectionSheetView: View {
                         } label: {
                             HStack {
                                 Image(systemName: "gearshape")
-                                Text("Tất cả cài đặt StopTheMadness")
+                                Text("All StopTheMadness Settings")
                                 Spacer()
                                 Image(systemName: "chevron.right")
                                     .font(.system(size: 12, weight: .bold))
@@ -197,11 +197,11 @@ public struct ProtectionSheetView: View {
                 }
                 .padding()
             }
-            .navigationTitle("Lá chắn bảo vệ")
+            .navigationTitle("Protection Shield")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Xong") {
+                    Button("Done") {
                         dismiss()
                     }
                     .font(.headline)
@@ -214,7 +214,7 @@ public struct ProtectionSheetView: View {
         guard let urlString = viewModel.currentTab?.url,
               let url = URL(string: urlString),
               let host = url.host else {
-            return "Trang web"
+            return "Website"
         }
         return host
     }

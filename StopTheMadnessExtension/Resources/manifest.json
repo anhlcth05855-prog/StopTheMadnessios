@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "StopTheMadness Pro",
   "version": "1.0.0",
-  "description": "Lấy lại quyền kiểm soát web trên Safari iOS & iPadOS: khôi phục copy/paste, chặn theo dõi, chặn autoplay, loại bỏ quảng cáo gây phiền toái.",
+  "description": "Take back control of Safari on iOS: restore copy & paste, stop website tracking, block media autoplay, and eliminate annoying web banners.",
   "permissions": [
     "storage",
     "webNavigation",

@@ -71,7 +71,7 @@ public struct BottomToolbarView: View {
                 Button {
                     viewModel.isShowingSettings = true
                 } label: {
-                    Label("Cài đặt StopTheMadness", systemImage: "gearshape")
+                    Label("StopTheMadness Settings", systemImage: "gearshape")
                 }
 
                 Button {
@@ -82,18 +82,18 @@ public struct BottomToolbarView: View {
                     }
                     viewModel.isShowingCustomRuleEditor = true
                 } label: {
-                    Label("Tùy biến CSS / JS trang này", systemImage: "curlybraces")
+                    Label("Custom CSS / JS for this site", systemImage: "curlybraces")
                 }
 
                 Button {
                     viewModel.copyCleanUrl()
                 } label: {
-                    Label("Sao chép liên kết sạch", systemImage: "doc.on.doc")
+                    Label("Copy Clean Link", systemImage: "doc.on.doc")
                 }
 
                 if let currentUrl = viewModel.currentTab?.url, let url = URL(string: currentUrl) {
                     ShareLink(item: url) {
-                        Label("Chia sẻ liên kết", systemImage: "square.and.arrow.up")
+                        Label("Share Link", systemImage: "square.and.arrow.up")
                     }
                 }
             } label: {

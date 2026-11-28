@@ -91,7 +91,7 @@ public struct AddressBarView: View {
 
     private var displayHost: String {
         let host = currentHost
-        return host.isEmpty ? (viewModel.currentTab?.url ?? "Nhập địa chỉ web...") : host
+        return host.isEmpty ? (viewModel.currentTab?.url ?? "Search or enter website name") : host
     }
 
     private var isSecure: Bool {

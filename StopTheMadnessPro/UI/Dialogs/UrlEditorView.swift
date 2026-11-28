@@ -26,7 +26,7 @@ public struct UrlEditorView: View {
                 VStack(spacing: 16) {
                     // Large Text Editor
                     VStack(alignment: .leading, spacing: 6) {
-                        Text("ĐƯỜNG DẪN URL HIỆN TẠI")
+                        Text("CURRENT URL")
                             .font(.system(size: 11, weight: .semibold))
                             .foregroundColor(.secondary)
 
@@ -49,7 +49,7 @@ public struct UrlEditorView: View {
                         } label: {
                             HStack(spacing: 6) {
                                 Image(systemName: "wand.and.stars")
-                                Text("Dọn sạch URL")
+                                Text("Sanitize URL")
                             }
                             .font(.system(size: 14, weight: .semibold))
                             .frame(maxWidth: .infinity)
@@ -64,7 +64,7 @@ public struct UrlEditorView: View {
                         } label: {
                             HStack(spacing: 6) {
                                 Image(systemName: "doc.on.doc")
-                                Text("Sao chép sạch")
+                                Text("Copy Clean URL")
                             }
                             .font(.system(size: 14, weight: .semibold))
                             .frame(maxWidth: .infinity)
@@ -80,13 +80,13 @@ public struct UrlEditorView: View {
                     if !params.isEmpty {
                         VStack(alignment: .leading, spacing: 10) {
                             HStack {
-                                Text("THAM SỐ TRUY VẤN (\(params.count))")
+                                Text("QUERY PARAMETERS (\(params.count))")
                                     .font(.system(size: 11, weight: .semibold))
                                     .foregroundColor(.secondary)
                                 Spacer()
                                 let trackerCount = params.filter { $0.isTracker }.count
                                 if trackerCount > 0 {
-                                    Text("\(trackerCount) tracker phát hiện")
+                                    Text("\(trackerCount) trackers detected")
                                         .font(.system(size: 11, weight: .bold))
                                         .foregroundColor(.red)
                                 }
@@ -148,7 +148,7 @@ public struct UrlEditorView: View {
                             dismiss()
                             viewModel.navigate(to: urlText, inNewTab: false)
                         } label: {
-                            Text("Truy cập liên kết")
+                            Text("Open URL")
                                 .font(.system(size: 16, weight: .bold))
                                 .frame(maxWidth: .infinity)
                                 .padding(.vertical, 14)
@@ -161,7 +161,7 @@ public struct UrlEditorView: View {
                             dismiss()
                             viewModel.navigate(to: urlText, inNewTab: true)
                         } label: {
-                            Text("Mở trong thẻ mới")
+                            Text("Open in New Tab")
                                 .font(.system(size: 15, weight: .semibold))
                                 .frame(maxWidth: .infinity)
                                 .padding(.vertical, 12)
@@ -173,11 +173,11 @@ public struct UrlEditorView: View {
                 }
                 .padding()
             }
-            .navigationTitle("Trình chỉnh sửa URL")
+            .navigationTitle("URL Editor")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Đóng") {
+                    Button("Close") {
                         dismiss()
                     }
                 }
@@ -211,16 +211,16 @@ public struct UrlEditorView: View {
         let result = UrlSanitizer.sanitize(urlText)
         urlText = result.cleanedUrl
         if !result.removedParams.isEmpty {
-            showToastMessage("Đã gỡ bỏ \(result.removedParams.count) tham số tracker!")
+            showToastMessage("Removed \(result.removedParams.count) tracking parameters!")
         } else {
-            showToastMessage("URL đã sạch sẽ, không có tracker.")
+            showToastMessage("URL is clean, no trackers found.")
         }
     }
 
     private func copyCleanUrl() {
         let result = UrlSanitizer.sanitize(urlText)
         UIPasteboard.general.string = result.cleanedUrl
-        showToastMessage("Đã sao chép URL sạch vào bộ nhớ tạm!")
+        showToastMessage("Clean URL copied to clipboard!")
     }
 
     private func removeParam(named name: String) {
@@ -230,7 +230,7 @@ public struct UrlEditorView: View {
             components.queryItems = nil
         }
         urlText = components.string ?? urlText
-        showToastMessage("Đã xóa tham số \(name)")
+        showToastMessage("Removed parameter \(name)")
     }
 
     private func showToastMessage(_ msg: String) {
